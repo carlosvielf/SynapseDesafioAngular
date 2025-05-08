@@ -15,13 +15,43 @@
         </div>
         <div class="form-group">
             <label for="password">Senha</label>
-            <input type="password" id="password" placeholder="" required>
+            <div class="password-wrapper">
+              <input
+                class="pass"
+                [type]="visibilidadeSenha ? 'text' : 'password'"
+                name="password"
+                id="password"
+                maxlength="40" 
+                placeholder="Digite sua senha"
+              >
+              <img 
+                class="toggle-visibility"
+                [src]="visibilidadeSenha ? 'assets/imagens/eye_open.png' : 'assets/imagens/eye_close.png'"
+                (click)="mostrarSenha()"
+                alt="Toggle visibility"
+              >
+          </div>
           </div>
           <div class="form-group">
             <label for="password">Confirmação da Senha</label>
-            <input type="password" id="password" placeholder="" required>
+            <div class="password-wrapper">
+              <input
+                class="pass"
+                [type]="visibilidadeSenha ? 'text' : 'password'"
+                name="password"
+                id="password"
+                maxlength="40" 
+                placeholder="Digite sua senha"
+              >
+              <img 
+                class="toggle-visibility"
+                [src]="visibilidadeSenha ? 'assets/imagens/eye_open.png' : 'assets/imagens/eye_close.png'"
+                (click)="mostrarSenha()"
+                alt="Toggle visibility"
+              >
           </div>
-        <button routerLink="home" type="submit">Entrar</button>
+      </div>
+        <button routerLink="home" type="submit">Cadastrar</button>
       </form>
       <p>Possui conta? <a routerLink="/">Entrar</a></p>
     </div>
